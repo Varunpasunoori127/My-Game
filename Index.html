@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Orb Runner — by Varun Pasunoori</title>
+  <meta name="description" content="A vanilla JS arcade game: collect orbs, dodge hazards, and climb levels." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Orb Runner</h1>
+    <div class="meta">
+      <a href="https://github.com/Varunpasunoori127" target="_blank" rel="noopener">My GitHub</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <canvas id="game" width="720" height="420" aria-label="Orb Runner Game"></canvas>
+
+    <!-- UI Overlays -->
+    <section id="overlay" class="overlay show">
+      <div class="panel">
+        <h2>Orb Runner</h2>
+        <p>Collect <strong>orbs</strong>, avoid <strong>hazards</strong>, and survive as the game speeds up.</p>
+        <ul class="help">
+          <li><kbd>WASD</kbd> or <kbd>Arrow Keys</kbd> to move</li>
+          <li><kbd>P</kbd> to pause</li>
+        </ul>
+        <div class="cta-row">
+          <button id="btnStart">Start Game</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="hud" class="hud">
+      <div>Score: <span id="score">0</span></div>
+      <div>Level: <span id="level">1</span></div>
+      <div>Lives: <span id="lives">3</span></div>
+    </section>
+
+    <section id="gameover" class="overlay">
+      <div class="panel">
+        <h2>Game Over</h2>
+        <p>Your score: <span id="finalScore">0</span></p>
+        <div class="cta-row">
+          <button id="btnRetry">Play Again</button>
+          <button id="btnHome">Home</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <small>Built specifically for this application using HTML, CSS, and vanilla JavaScript. No external libraries.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
